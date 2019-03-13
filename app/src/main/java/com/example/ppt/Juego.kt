@@ -18,6 +18,7 @@ class Juego : AppCompatActivity(), View.OnClickListener {
     var lizard: Button? = null
     var spock: Button? = null
 
+    // Se crea una lista donde se almacenarán las imágenes correspondientes a las jugadas
     var images = intArrayOf(R.drawable.piedra, R.drawable.papel, R.drawable.tijera, R.drawable.lagartija, R.drawable.spock)
     var userinput = 0
 
@@ -38,11 +39,14 @@ class Juego : AppCompatActivity(), View.OnClickListener {
         lizard?.setOnClickListener(this)
         spock?.setOnClickListener(this)
 
+        // Sale de la tarea actual y regresa a la pantalla principal
         btnExit.setOnClickListener {
             finish()
         }
     }
 
+    // Función encargada de mostrar la opción del jugador al presionar cualquiera
+    // de los 5 botones para dar inicio a la jugada
     override fun onClick(v: View) {
         val id = v.id
         when (id) {
@@ -74,12 +78,17 @@ class Juego : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    // Función encargada de generar de manera aleatoria la opción de juego de la IA
+    // genera un valor de entre 0 a 4
     private fun setOutput() {
         val imageId = (Math.random() * images.size ).toInt()
         output?.setBackgroundResource(images[imageId])
         checkResult(imageId)
     }
 
+
+    // Se encarga de evaluar las jugadas de las opciones seleccionadas de ambos lados
+    // para poder proceder a determinar el estado del turno.
     private fun checkResult(imageId: Int) {
         if (userinput === 1 && imageId == 0) { // Jugadas Piedra
             showResult(2)
@@ -134,6 +143,9 @@ class Juego : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
+    // Dependiendo de la elección del usuario y la opción generada para la IA
+    // después de ser evaluadas las opciones se determinará el resultado del turno.
     private fun showResult(result: Int) {
         when(result){
             0->Toast.makeText(applicationContext, "PIERDE", Toast.LENGTH_SHORT).show()

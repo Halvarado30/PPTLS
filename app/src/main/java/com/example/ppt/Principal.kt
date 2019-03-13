@@ -15,13 +15,18 @@ class Principal : AppCompatActivity() {
         var botonSalir: Button
         var botonInstruccion:Button
 
+
+        // Se encarga de llamar al activity que contiene la modalidad de juego
+        // presionando el botón de COMENZAR
         fun jugar() {
             val intent: Intent = Intent(this, Juego::class.java)
             startActivity(intent)
         }
 
+        // Se encarga de llamar al activity que contiene las instrucciones para el juego
+        // presionando el botón de INSTRUCCIONES
         fun instructions() {
-            val intent: Intent = Intent(this, InstructionActivity::class.java)
+            val intent = Intent(this, InstructionActivity::class.java)
             startActivity(intent)
         }
 
@@ -31,6 +36,8 @@ class Principal : AppCompatActivity() {
 
         botonJugar.setOnClickListener { jugar() }
         botonInstruccion.setOnClickListener{ instructions()}
+
+        // Cumple la función de cerrar la aplicación en el caso de que se presione el botón SALIR
         botonSalir.setOnClickListener { finish() }
     }
 }
