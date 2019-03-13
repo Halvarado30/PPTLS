@@ -152,6 +152,7 @@ class Juego : AppCompatActivity(), View.OnClickListener {
             1-> Toast.makeText(applicationContext, "GANA", Toast.LENGTH_SHORT).show()
             else->Toast.makeText(applicationContext, "EMPATE", Toast.LENGTH_SHORT).show()
         }
+        Toast.makeText(applicationContext, "Seleccione otra opción", Toast.LENGTH_SHORT).show()
     }
 }
 
