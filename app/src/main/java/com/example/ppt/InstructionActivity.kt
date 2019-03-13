@@ -10,7 +10,6 @@ class InstructionActivity : AppCompatActivity() {
 
     // Se crea una lista donde se almacenarán las imágenes que contienen las reglas del juego
     var fondo = intArrayOf(R.drawable.piedrarules, R.drawable.papelrules, R.drawable.tijerasrules, R.drawable.lizardrules, R.drawable.spockrules)
-    var next:Button?=null
     private var position:Int=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,8 +45,11 @@ class InstructionActivity : AppCompatActivity() {
             // si se encuentra en la primera instrucción se ocultará el botón de ANTERIOR
             // para evitar que el usuario vaya más allá de los límites de la lista
             // y cambiará el estado de visibilidad del botón de ANTERIOR
-            if (position == 0){
+            if (position == 0 || position == 3){
                 btnIntruccion.visibility = View.VISIBLE
+            }
+
+            if(position == 0){
                 btnAnterior.visibility = View.INVISIBLE
             }
         }
