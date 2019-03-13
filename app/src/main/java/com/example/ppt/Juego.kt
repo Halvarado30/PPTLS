@@ -10,13 +10,13 @@ import kotlinx.android.synthetic.main.activity_juego.*
 
 @Suppress("DEPRECATED_IDENTITY_EQUALS")
 class Juego : AppCompatActivity(), View.OnClickListener {
-    var input: ImageView? = null
-    var output: ImageView? = null
-    var rock: Button? = null
-    var paper: Button? = null
-    var scissors: Button? = null
-    var lizard: Button? = null
-    var spock: Button? = null
+    private var input: ImageView? = null
+    private var output: ImageView? = null
+    private var rock: Button? = null
+    private var paper: Button? = null
+    private var scissors: Button? = null
+    private var lizard: Button? = null
+    private var spock: Button? = null
 
     // Se crea una lista donde se almacenarán las imágenes correspondientes a las jugadas
     var images = intArrayOf(R.drawable.piedra, R.drawable.papel, R.drawable.tijera, R.drawable.lagartija, R.drawable.spock)

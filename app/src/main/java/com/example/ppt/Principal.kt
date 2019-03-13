@@ -11,15 +11,15 @@ class Principal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
-        var botonJugar: Button
-        var botonSalir: Button
-        var botonInstruccion:Button
+        val botonJugar: Button = findViewById(R.id.btninicio)
+        val botonSalir: Button = findViewById(R.id.btnSalir)
+        val botonInstruccion:Button = findViewById(R.id.btnInstruccion)
 
 
         // Se encarga de llamar al activity que contiene la modalidad de juego
         // presionando el botón de COMENZAR
         fun jugar() {
-            val intent: Intent = Intent(this, Juego::class.java)
+            val intent = Intent(this, Juego::class.java)
             startActivity(intent)
         }
 
@@ -29,10 +29,6 @@ class Principal : AppCompatActivity() {
             val intent = Intent(this, InstructionActivity::class.java)
             startActivity(intent)
         }
-
-        botonJugar = findViewById(R.id.btninicio)
-        botonSalir = findViewById(R.id.btnSalir)
-        botonInstruccion = findViewById(R.id.btnInstruccion)
 
         botonJugar.setOnClickListener { jugar() }
         botonInstruccion.setOnClickListener{ instructions()}
