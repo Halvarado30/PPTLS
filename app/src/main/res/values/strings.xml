@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PPTLS</string>
+    <string name="jugador">Jugador</string>
+    <string name="phraseVS">VS</string>
+    <string name="nameIA">IA</string>
+    <string name="indications">Presione su opción:</string>
+    <string name="inicio">COMENZAR</string>
+    <string name="salir">SALIR</string>
+    <string name="piedra">PIEDRA</string>
+    <string name="papel">PAPEL</string>
+    <string name="tijera">TIJERA</string>
+    <string name="lagartija">LAGARTIJA</string>
+    <string name="spock">SPOCK</string>
+    <string name="Jugador">Opción del Jugador:</string>
+    <string name="IA">Opción de la IA</string>
+    <string name="Instruccion">Instrucciones del juego</string>
+    <string name="btnInstruccion">INSTRUCCIONES</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="exitCross">X</string>
+</resources>
